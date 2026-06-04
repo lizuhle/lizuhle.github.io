@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Liz Uhle / Tohono O'odham Project"
+title                    : "Liz Uhle"
 title_separator          : "-"
 name                     : &name "Liz Uhle"
-description              : &description "Tohono O'odham Dictionary Project"
+description              : &description "Home Page"
 url                      : https://lizuhle.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "lizuhle/lizuhle.github.io"
