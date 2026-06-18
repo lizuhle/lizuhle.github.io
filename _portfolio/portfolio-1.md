@@ -1,13 +1,13 @@
 ---
 title: "Internship Project: Tohono O'odham FLEx Dictionary"
-excerpt: "Digitalization of the Tohono O'odham dictionary by Madeleine Mathiot<br/><img src='/images/papagoDictpdf.png' style="width: 50%;">"
+excerpt: "Digitalization of the Tohono O'odham dictionary by Madeleine Mathiot<br/><img src='/images/papagoDictpdf.png' width='300'>"
 collection: portfolio
 ---
 
 
 ### Introduction
 
-<img src='/images/papagoDictpdf.png' style="width: 50%;">
+<img src='/images/papagoDictpdf.png' width='300'>
 
 The main focus of this project was to digitalize a dictionary of the O'odham language, spoken in the Sonoran desert of Arizona and northern Mexico by the Tohono O'odham ("Desert People"). The source text is in a flat, text-based format, and my goal was to transform it into a structured representation that could be more easily analyzed and useful to the Tohono O'odham and linguists. While the original dictionary contains rich lexical and grammatical information, its lack of consistent structure makes it difficult to use for both linguistic research and computational applications.
 
