@@ -14,7 +14,7 @@ My academic training combines theoretical linguistics with practical computation
 
 In addition to my academic work, I bring professional experience as a Translator for elementary math textbooks (EN->ES). In this role, I work in a fast paced, constantly changing, deadline-based work environment. This experience has strengthened my ability to think critically, adapt quickly, and maintain precision in communication—skills that directly translate to my work in language technology.
 
-Currently, I am working on projects involving text processing, linguistic data structuring, and computational representations of language, including parsing dictionary data into structured formats. These experiences have deepened my interest in how linguistic structure can be formalized and operationalized within computational systems.
+Currently, I am working on projects involving text processing, linguistic data structuring, and computational representations of language, including parsing dictionary data into structured formats. These experiences have deepened my interest in how linguistic structure can be formalized within computational systems.
 
 Looking ahead, I hope to contribute to the development of language technologies that support both research and real-world applications, particularly in the areas of language learning, low-resource languages, and linguistic data accessibility. I am especially motivated by opportunities to bridge the gap between theoretical linguistics and practical tools that can benefit learners, educators, and researchers alike. 
 
