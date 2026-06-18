@@ -1,21 +1,50 @@
 ---
 title: "Internship Project: Tohono O'odham FLEx Dictionary"
-excerpt: "Short description of the goals and content of my internship<br/><img src='/images/papagoDictpdf.png'>"
+excerpt: "Digitalization of the Tohono O'odham dictionary by Madeleine Mathiot<br/><img src='/images/papagoDictpdf.png' style="width: 50%;">"
 collection: portfolio
 ---
 
 
 ### Introduction
 
-<img src='/images/papagoDictpdf.png'>
+<img src='/images/papagoDictpdf.png' style="width: 50%;">
 
 The main focus of this project was to digitalize a dictionary of the O'odham language, spoken in the Sonoran desert of Arizona and northern Mexico by the Tohono O'odham ("Desert People"). The source text is in a flat, text-based format, and my goal was to transform it into a structured representation that could be more easily analyzed and useful to the Tohono O'odham and linguists. While the original dictionary contains rich lexical and grammatical information, its lack of consistent structure makes it difficult to use for both linguistic research and computational applications.
 
 
 
+### Background
 
 
-As you're describing the content of your internship, be sure to describe how you were able to apply the concepts and skills you acquired from HLT courses to your internship. You'll also want to describe the things that you learned from the internship itself that might help you in future work.
+
+### Goal
+
+
+
+### Approach
+
+
+
+### Implementation
+
+
+
+### Results
+
+
+
+### Conclusion
+
+
+
+### Future Work
+
+
+
+
+
+
+
 
 ## Evaluation criteria
 Remember that each of the two projects in your portfolio will be evaluated on these points:
