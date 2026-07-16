@@ -9,7 +9,6 @@ collection: portfolio
 
 The main focus of this project was to digitalize a dictionary of the O'odham language, spoken in the Sonoran desert of Arizona and northern Mexico by the Tohono O'odham ("Desert People"). The source text is in a flat, text-based format, and my goal was to transform it into a structured representation that could be more easily analyzed and useful to the Tohono O'odham and linguists. While the original dictionary contains rich lexical and grammatical information, its lack of consistent structure makes it difficult to use for both linguistic research and computational applications.
 
-<img src='/images/papagoDictpdf.png'>
 
 ## Background
 
@@ -17,8 +16,9 @@ Tohono O’odham is an Indigenous language spoken in the southwestern United Sta
 
 ## Problem Statement
 
-The primary challenge of this project lies in converting semi-structured dictionary text into a fully structured format. The source data contains inconsistencies, such as varying use of punctuation, abbreviations, and embedded notes. Additionally, certain patterns—such as “see” references or parenthetical notes—can be difficult to distinguish from core lexical information. These issues make it difficult to reliably extract fields like part of speech, senses, and morphological features using straightforward methods. As a result, a more nuanced parsing approach was required to handle these ambiguities.
+The primary challenge of this project lies in converting semi-structured dictionary text into a fully structured format. The source data contains inconsistencies, such as varying use of punctuation, abbreviations, and embedded notes. Additionally, certain patterns—such as “see” references or parenthetical notes—can be difficult to distinguish from core lexical information. These issues make it difficult to reliably extract fields like part of speech, senses, and morphological features using straightforward methods. As a result, a more nuanced parsing approach was required to handle these ambiguities. Below is a snippet from the first page of the dictionary, in the format it was given to me (.docx/.pdf). You can see from this snippet the structure I had to contend with: boldface, page numbers, guide words, and the alphabetical range header. 
 
+<img src='/images/papagoDictpdf.png'>
 
 ## Approach
 
@@ -29,7 +29,7 @@ To address these challenges, I developed a multi-step parsing pipeline that proc
 
 The parser was implemented in Python, using built-in libraries such as *re* for regular expression pattern matching. Each dictionary entry is processed and converted into a structured object with predefined fields. One of the main challenges was correctly handling nested or overlapping annotations, such as parentheses containing additional metadata. Another difficulty involved distinguishing between true lexical content and cross-references introduced by terms like “see.” To address these issues, I implemented custom logic to isolate and categorize different types of information. The resulting data structure allows for easier manipulation and export to other formats.
 
-### Results
+## Results
 
 The final output is a usable dictionary in the FLEx dictionary software. In many cases, the parser successfully extracted key components such as headwords, parts of speech, and definitions. For example, an originally unstructured entry can be transformed into a format where each element is explicitly labeled and accessible. However, some edge cases remain challenging and may require additional refinement.
 
