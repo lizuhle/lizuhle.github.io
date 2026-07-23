@@ -1,5 +1,5 @@
 ---
-title: "Internship Project: Tohono O'odham FLEx Dictionary"
+title: "Tohono O'odham FLEx Dictionary"
 excerpt: "Digitalization of the Tohono O'odham dictionary by Madeleine Mathiot<br/><img src='/images/papagoDictpdf.png' width='300'>"
 collection: portfolio
 ---
@@ -27,7 +27,9 @@ To address these challenges, I developed a multi-step parsing pipeline that proc
 
 ## Implementation
 
-The parser was implemented in Python, using built-in libraries such as *re* for regular expression pattern matching. Each dictionary entry is processed and converted into a structured object with predefined fields. One of the main challenges was correctly handling nested or overlapping annotations, such as parentheses containing additional metadata. Another difficulty involved distinguishing between true lexical content and cross-references introduced by terms like “see.” To address these issues, I implemented custom logic to isolate and categorize different types of information. The resulting data structure allows for easier manipulation and export to other formats.
+The parser was implemented in Python, using built-in libraries such as *re* for regular expression pattern matching. Each dictionary entry is processed and converted into a structured object with predefined fields. One of the main challenges was correctly handling nested or overlapping annotations, such as parentheses containing additional metadata. Another difficulty involved distinguishing between true lexical content and cross-references introduced by terms like “see.” To address these issues, I implemented custom logic to isolate and categorize different types of information. The resulting data structure allows for easier manipulation and export to other formats. 
+
+(add in about mapping to the Standard lexical data format)
 
 ## Results
 
@@ -35,7 +37,10 @@ The final output is a usable dictionary in the FLEx dictionary software. In many
 
 ### Example 1
 
-Here is an example of a typically structured dictionary entry that was correctly parsed in my parser, with all the necessary items being mapped to the correct fields in FLEx.
+Here is an example of a typically structured dictionary entry that was correctly parsed in my parser, with all the necessary items being mapped to the correct fields in FLEx. The headword maps to Lexeme Form, definition to definition, Part of speech to Grammatical Info, and the examples which map to a field for the sentence in the vernacular (Tohono O'odham), and the translation (English).
+
+<img src='/images/normal entry txt file.png'>
+<img src='/images/normal entry flex.png'>
 
 ### Example 2
 
@@ -65,7 +70,24 @@ This is how this was parsed in FLEx. This is another case where I manually fixed
 
 <img src='/images/flex entry parse of vud word.png'>
 
+Here is how the final entry looked after I manually fixed the croff-reference.
 
+<img src='/images/iihugga fixed.png'>
+
+## Bonus
+
+I also turned this project into an Android application, using the Dictionary App Builder software by SIL. This is available [here](https://github.com/lizuhle/Tohono-O-odham-Dictionary/releases/tag/v1.0/Tohono_O.odham-1.0.apk) for download, and I hope to have it available on the Google Play Store too. This app will hopefully serve as a useful tool for anyone needing to access Tohono O'odham language data. Here are some screenshots from the application. 
+
+<img src='/images/app_a_list'> <img src='/images/app_entry_ex.png'> 
+<img src='/images/app_search_function.png'> <img src='/images/app_search_results.png'>
+
+#### Download instructions
+##### How to install:
+
+1. Download APK
+2. Open file
+3. Allow unknown apps
+4. Install
 
 ## Conclusion
 
@@ -73,7 +95,7 @@ One of the most challenging aspects of this project was dealing with inconsisten
 
 ## Future Work
 
-Future improvements could focus on increasing the robustness of the parser, particularly in handling edge cases. Additionally, a user interface could be developed to allow for easier browsing and searching of the dictionary. More advanced techniques, such as machine learning, could also be explored to improve parsing accuracy.
+Future improvements could focus on increasing the robustness of the parser, particularly in handling edge cases. Additionally, a user interface could be developed to allow for easier browsing and searching of the dictionary. More advanced techniques, such as machine learning, could also be explored to improve parsing accuracy. There remain a few issues in the dictionary entries themselves, as I was not able to look at every single entry to ensure that everything parsed 100% correctly. I plan to do a more comprehensive review in the future and make an update to the app. 
 
 
 
