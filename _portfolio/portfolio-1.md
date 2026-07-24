@@ -27,7 +27,7 @@ The primary challenge of this project lies in converting semi-structured diction
 
 ## Approach
 
-To address these challenges, I developed a multi-step parsing pipeline that processed each dictionary entry individually. The approach begins by identifying entry boundaries and then progressively extracting specific components such as headwords, parts of speech, and definitions. A key design decision was to represent each entry as a Lexeme object, allowing for a clear and extensible data structure. Regular expressions and rule-based heuristics were used to identify patterns within the text. Special attention was given to ambiguous cases, where multiple interpretations of the text were possible.
+To address these challenges, I developed a multi-step parsing pipeline that processed each dictionary entry individually. The approach begins by identifying entry boundaries and then progressively extracting specific components such as headwords, parts of speech, and definitions. A key design decision was to represent each entry as a Lexeme object, allowing for a clear and extensible data structure. Regular expressions and rule-based heuristics were used to identify patterns within the text. For initial testing, a carefully selected test set of data was used to ensure that all the different entry types were being correctly handled. 
 
 
 
@@ -41,7 +41,7 @@ The parser was implemented in Python, using built-in libraries such as *re* for 
 
 ## Results
 
-The final output is a usable dictionary in the FLEx dictionary software. In many cases, the parser successfully extracted key components such as headwords, parts of speech, and definitions. For example, an originally unstructured entry can be transformed into a format where each element is explicitly labeled and accessible. However, some edge cases remain challenging and may require additional refinement.
+The final output is a usable dictionary in the FLEx dictionary software and a downloadable dictionary app for Android users. The parser was far from perfect, but in many cases the parser successfully extracted key components such as headwords, parts of speech, and definitions. An originally loosely structured entry was transformed into a format where each element is explicitly labeled and accessible. However, some edge cases remained challenging and required additional refinement. Even after the final import to FLEx, there was still a large amount of manual work due to the innumerable inconsistencies in the entries, plus additional nuances and details that were not taken into account when originally writing the parser. Below are several examples of how the parser correctly and incorrectly handled various entries.
 
 
 ### Example 1
@@ -59,22 +59,22 @@ Here is an example of an entry where the headword is actually part of a phrase, 
 
 <img src='/images/in phrase dict.png'>
 
-This was a structure that I did not take into account when I was writing my parser, and therefore did not get parsed correctly. The parser recognized "'o'ohon in Jios-'O'ohon" as the entire headword. 
+This was a structure that I did not take into account when I was writing the parser, and therefore did not get parsed correctly. The parser recognized "'o'ohon in Jioş-'O'ohon" as the entire headword. 
 
 <img src='/images/flex entry in phrase.png'>
 
-I fixed entries like this manually, by putting "in Jios-'O'ohon" in the *Restrictions* field, to show that this particular usage of *'o'ohon* is restricted to its use in the whole phrase "Jios-'O'ohon."
+I fixed entries like this manually, by putting "in Jioş-'O'ohon" in the *Restrictions* field, to show that this particular usage of *'o'ohon* is restricted to its use in the whole phrase "Jioş-'O'ohon."
 
 <img src='/images/flex in phrase fixed.png'>
 
 
 ### Example 3
 
-Here is another example of a common incorrect parsing. In the below image, the headword is *'i'ihugga*, followed by a cross reference to another entry *vud 'ihugga*. My parser should be easily able to handle this entry because it fits the standard format of *headword* "see" *POS* *Cross-referenced word* "=" *definition*. The problem with this particular case is that the word order of *vud 'ihugga* is not in the same format that the actual entry for that lexical item is in.
+Here is another example of a common incorrect parsing. In the below image, the headword is *'i'ihugga*, followed by a cross reference to another entry *vuḑ 'ihugga*. My parser should be easily able to handle this entry because it fits the standard format of *headword* "see" *POS* *Cross-referenced word* "=" *definition*. The problem with this particular case is that the word order of *vuḑ 'ihugga* is not in the same format that the actual entry for that lexical item is in.
 
 <img src='/images/vud word.png'>
 
-Below is how *vud 'ihugga* actually appears in the dictionary. It is entered as *'ihugga vud*, which the parser did not recognize to be the same thing as *vud 'ihugga*. 
+Below is how *vuḑ 'ihugga* actually appears in the dictionary. It is entered as *'ihugga vuḑ*, which the parser did not recognize to be the same thing as *vuḑ 'ihugga*. 
 
 <img src='/images/word vud.png'>
 
@@ -113,3 +113,7 @@ One of the most challenging aspects of this project was dealing with inconsisten
 
 Future improvements could focus on increasing the robustness of the parser, particularly in handling edge cases. Additionally, a user interface could be developed to allow for easier browsing and searching of the dictionary. More advanced techniques, such as machine learning, could also be explored to improve parsing accuracy. There remain a few issues in the dictionary entries themselves, as I was not able to look at every single entry to ensure that everything parsed 100% correctly. I plan to do a more comprehensive review in the future and make an update to the app. 
 
+
+## Link to the code repository
+
+Click [here](https://github.com/lizuhle/Tohono-O-odham-Dictionary).
