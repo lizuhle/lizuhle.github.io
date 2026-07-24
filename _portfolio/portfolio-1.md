@@ -10,9 +10,12 @@ collection: portfolio
 The main focus of this project was to digitalize a dictionary of the O'odham language, spoken in the Sonoran desert of Arizona and northern Mexico by the Tohono O'odham ("Desert People"). The source text is in a flat, text-based format, and my goal was to transform it into a structured representation that could be more easily analyzed and useful to the Tohono O'odham and linguists. While the original dictionary contains rich lexical and grammatical information, its lack of consistent structure makes it difficult to use for both linguistic research and computational applications.
 
 
+
 ## Background
 
-Tohono O’odham is an Indigenous language spoken in the southwestern United States and northern Mexico, with significant cultural and linguistic importance. Linguistic resources for such languages are often stored in legacy formats that are not immediately compatible with modern tools. One such tool is FLEx (FieldWorks Language Explorer), which is widely used for lexical database management and language documentation. Dictionary entries typically include multiple components such as headwords, parts of speech, morphological information, example sentences, and cross-references. However, these elements are not always clearly separated in raw text, which introduces challenges for computational processing.
+Tohono O’odham is an Indigenous language spoken in the southwestern United States and northern Mexico, with significant cultural and linguistic importance. The data contained in this dictionary was originally gathered by Madeleine Mathiot over two years (1958-1960), while staying at the Covered Wells Mission in Arizona. Much of the data comes directly from one Tohono O'odham individual, Jose Pancho. Her original dictionary was published in the early '70s and was the most comprehensive dictionary of the Tohono O'odham language. In the early 2000s, Dr. Michael Hammond and Dr. Ofelia Zepeda (along with several students) began work on putting the dictionary on the internet. The typed pages were scanned with OCR and errors were manually fixed. This scanned dictionary was the starting point for my project. The aim of this project was to get all of the data into FLEx (FieldWorks Language Explorer), which is widely used for lexical database management and language documentation. 
+
+
 
 ## Problem Statement
 
@@ -20,9 +23,12 @@ The primary challenge of this project lies in converting semi-structured diction
 
 <img src='/images/papagoDictpdf.png'>
 
+
+
 ## Approach
 
 To address these challenges, I developed a multi-step parsing pipeline that processed each dictionary entry individually. The approach begins by identifying entry boundaries and then progressively extracting specific components such as headwords, parts of speech, and definitions. A key design decision was to represent each entry as a Lexeme object, allowing for a clear and extensible data structure. Regular expressions and rule-based heuristics were used to identify patterns within the text. Special attention was given to ambiguous cases, where multiple interpretations of the text were possible.
+
 
 
 ## Implementation
@@ -31,17 +37,21 @@ The parser was implemented in Python, using built-in libraries such as *re* for 
 
 <img src='/images/lift format.png'>
 
+
+
 ## Results
 
 The final output is a usable dictionary in the FLEx dictionary software. In many cases, the parser successfully extracted key components such as headwords, parts of speech, and definitions. For example, an originally unstructured entry can be transformed into a format where each element is explicitly labeled and accessible. However, some edge cases remain challenging and may require additional refinement.
+
 
 ### Example 1
 
 Here is an example of a typically structured dictionary entry that was correctly parsed, with all the necessary items being mapped to the correct fields in FLEx. The headword maps to Lexeme Form, definition to definition, Part of speech to Grammatical Info, and the examples which map to a field for the sentence in the vernacular (Tohono O'odham), and the translation (English).
 
 <img src='/images/normal entry txt file.png'>
-/n
+
 <img src='/images/normal entry flex.png'>
+
 
 ### Example 2
 
@@ -56,6 +66,7 @@ This was a structure that I did not take into account when I was writing my pars
 I fixed entries like this manually, by putting "in Jios-'O'ohon" in the *Restrictions* field, to show that this particular usage of *'o'ohon* is restricted to its use in the whole phrase "Jios-'O'ohon."
 
 <img src='/images/flex in phrase fixed.png'>
+
 
 ### Example 3
 
@@ -75,25 +86,24 @@ Here is how the final entry looked after I manually fixed the cross-reference.
 
 <img src='/images/iihugga fixed.png'>
 
+
 ## Bonus
 
 I also turned this project into an Android application, using the Dictionary App Builder software by SIL. This is available [here](https://github.com/lizuhle/Tohono-O-odham-Dictionary/releases/tag/v1.0/Tohono_O.odham-1.0.apk) for download, and I hope to have it available soon on the Google Play Store. This app will hopefully serve as a useful tool for anyone needing to access Tohono O'odham language data. Here are some screenshots from the application. *There are instructions for how to download the app on your Android device below the screenshots.*
 
-<img src='/images/app_a_list'> 
+<img src='/images/app_a_list.png'> 
 
 <img src='/images/app_entry_ex.png'> 
 
-<img src='/images/app_search_function.png'> 
-
 <img src='/images/app_search_results.png'>
 
-#### Download instructions
-##### How to install:
+### Download instructions
+#### How to install:
 
-1. Download APK
+1. Download .apk file
 2. Open file
-3. Allow unknown apps
-4. Install
+3. Select "Allow unknown apps"
+4. Install the app
 
 ## Conclusion
 
@@ -103,21 +113,3 @@ One of the most challenging aspects of this project was dealing with inconsisten
 
 Future improvements could focus on increasing the robustness of the parser, particularly in handling edge cases. Additionally, a user interface could be developed to allow for easier browsing and searching of the dictionary. More advanced techniques, such as machine learning, could also be explored to improve parsing accuracy. There remain a few issues in the dictionary entries themselves, as I was not able to look at every single entry to ensure that everything parsed 100% correctly. I plan to do a more comprehensive review in the future and make an update to the app. 
 
-
-
-
-
-
-### Evaluation criteria
-Remember that each of the two projects in your portfolio will be evaluated on these points:
-
-* **Length**: A summary of the project goals, technology used, and outcomes, as appropriate for a general technical audience, between 1000 and 3000 words (not counting code)
-* **Content**: student’s experience demonstrates the learning outcomes for the MSHLT program [^note]
-* **Code**: Code is contained in the site, or a link to the code (such as in a GitHub repository) exists on the site.
-* **Above and beyond**: How well does this component communicate the most relevant features?
-
-[^note]: The learning outcomes of the MSHLT program are:
-    
-    1. Students will demonstrate programming skills for the workplace.
-    2. Students will be able to use fundamental algorithms and concepts in Natural Language Processing.
-    3. Students will show knowledge of tools and packages used in Natural Language Processing.
