@@ -19,8 +19,6 @@ Education
   - Vice-President, Portuguese Language Club (CLiP) 
 
 
-
-
 Work experience
 ======
 - **Internship Project – Tohono O'odham Dictionary**  
