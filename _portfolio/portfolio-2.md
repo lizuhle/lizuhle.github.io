@@ -13,13 +13,13 @@ This Spanish Conjugation API is a Flask-based web application that generates ver
 
 ### Background
 
-Spanish verb conjugation is a core part of the language, but it is also one of the more complex areas for learners. Verbs change depending on tense, person, and number, and there are many irregular forms that do not follow predictable patterns. This is essential information that any language learner needs to be able to reference. When working with language data, one of the biggest challenges is obtaining structured and reliable datasets. Manually entering conjugation data for every verb and tense would be extremely time-consuming and not scalable. Because of this, I wanted to explore how to automate the process of collecting linguistic data while still maintaining a clean and usable structure for the API. In computational linguistics, handling this type of variation correctly is an important part of language-related applications. I built this project to explore how linguistic rules can be represented in code while also practicing API, database, and HTML design.
+Verb conjugation is a core part of language, but it is also one of the more complex areas for learners. Verbs change depending on tense, person, and number, and there are many irregular forms that do not follow predictable patterns. This is essential information that any language learner needs to be able to reference easily. When working with language data, one of the biggest challenges is obtaining structured and reliable datasets. Manually entering conjugation data for every verb and tense would be extremely time-consuming and not scalable. Because of this, I wanted to explore how to automate the process of collecting linguistic data while still maintaining a clean and usable structure for the API. In computational linguistics, handling this type of variation correctly is an important part of language-related applications. I built this project to explore how linguistic rules can be represented in code while also learning API, database, and HTML design.
 
 
 
 ### Goal
 
-The goal of this project was to create a working API that could take a Spanish verb (in the infinitive) as input and return its conjugated forms in a clear and structured way. In addition to that, I had several supporting goals:
+The goal of this project was to create a working API that could take a Spanish verb (in the infinitive) as input and return its conjugated forms in a clear and structured way. In addition to that, I had several other goals:
 
 * Store conjugation data in a database for easy recall
 * Automatically populate that database using scraped data
@@ -89,3 +89,8 @@ There are several ways this project could be expanded:
 * Deploy the API so it can be accessed publicly
 
 With these improvements, the API could evolve into a more complete tool for language learning or other NLP applications.
+
+
+### Link to the code repository
+
+Click [here](https://github.com/lizuhle/SpanishConjugationAPI)
